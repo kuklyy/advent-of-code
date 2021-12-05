@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+// these should be done by bitwise operators, but i want to treat it as a random data structure
+// TODO implement alternate solution using bitwise operators
 func main() {
 	part1()
 	part2()
