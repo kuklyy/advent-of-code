@@ -6,14 +6,13 @@ import (
 	"os"
 )
 
-func ReadFile(path string) *bufio.Scanner {
+func ReadFile(path string) (*bufio.Scanner, *os.File) {
 	input, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer input.Close()
 
 	scanner := bufio.NewScanner(input)
 
-	return scanner
+	return scanner, input
 }
