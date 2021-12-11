@@ -131,6 +131,33 @@ func part2() {
 	})
 
 	fmt.Println(len(basins[0]) * len(basins[1]) * len(basins[2]))
+
+	// visualize(table, basins[:4])
+}
+
+//lint:ignore U1000 is not required for solution
+func visualize(table [][]field, basins []map[string]bool) {
+	for y, row := range table {
+		for x, field := range row {
+			if field.isInBasin {
+				isInBasinSlice := false
+				for _, basin := range basins {
+					if basin[fmt.Sprint([]int{x, y})] {
+						isInBasinSlice = true
+						break
+					}
+				}
+				if isInBasinSlice {
+					fmt.Printf(" * ")
+				} else {
+					fmt.Printf(" . ")
+				}
+			} else {
+				fmt.Printf("   ")
+			}
+		}
+		fmt.Printf("\n")
+	}
 }
 
 func saveBasin(x, y int, table [][]field, basin map[string]bool) {
