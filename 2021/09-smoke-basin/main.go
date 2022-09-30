@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kuklyy/advent-of-code-2021/common"
+	"github.com/kuklyy/advent-of-code/common"
 )
 
 const rowSize = 100

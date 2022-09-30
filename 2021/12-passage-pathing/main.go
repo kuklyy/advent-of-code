@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/kuklyy/advent-of-code-2021/common"
+	"github.com/kuklyy/advent-of-code/common"
 )
 
 func main() {
